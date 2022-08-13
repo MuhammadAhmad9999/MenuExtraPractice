@@ -29,7 +29,7 @@ public class RecipeAdapter extends RecyclerView.Adapter <RecipeAdapter.viewHolde
     Context context;
     ArrayList<String> Dialogelist;
     String[] Ingredients= {"Onion = Price","Cheese = Price","Olive = Price","Chilli = Price"};
-    
+
 
 
     public RecipeAdapter(ArrayList<RecipeModel> list, Context context) {

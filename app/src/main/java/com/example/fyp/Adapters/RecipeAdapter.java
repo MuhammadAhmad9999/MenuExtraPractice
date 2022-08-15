@@ -14,15 +14,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fyp.MainActivity;
 import com.example.fyp.Models.RecipeModel;
 import com.example.fyp.R;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class RecipeAdapter extends RecyclerView.Adapter <RecipeAdapter.viewHolder>{
     ArrayList<RecipeModel> list;
@@ -55,6 +50,16 @@ public class RecipeAdapter extends RecyclerView.Adapter <RecipeAdapter.viewHolde
         holder.foodprice.setText(model.getFoodprice());
         holder.ratingtag.setText(model.getRatingtag());
         holder.starimage.setImageResource(model.getStarimage());
+
+        holder.Addtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
 
         holder.addimage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,6 +152,7 @@ public class RecipeAdapter extends RecyclerView.Adapter <RecipeAdapter.viewHolde
         ImageView removeimage;
         TextView displayoutput;
         Button Addextra;
+        Button Addtocart;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -162,6 +168,7 @@ public class RecipeAdapter extends RecyclerView.Adapter <RecipeAdapter.viewHolde
             removeimage=itemView.findViewById(R.id.remove_image);
             displayoutput=itemView.findViewById(R.id.item_quantity_text);
             Addextra=itemView.findViewById(R.id.extra_btn);
+            Addtocart=itemView.findViewById(R.id.add_to_cart_btn);
         }
     }
 }

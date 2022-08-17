@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.fyp.Models.CategoryModel;
+import com.example.fyp.Models.RecipeModel;
 import com.example.fyp.R;
 
 import java.util.ArrayList;

@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView reciperecyclerview;
-    RecyclerView categoryrecyclerview;
+    RecyclerView recommendationrecyclerview;
     SliderView sliderView;
     int[] images={R.drawable.food2,R.drawable.food3,R.drawable.food4};
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new RecipeModel(R.drawable.food5 , "Pizza", "Fastfood","Price:","900","4.3",R.drawable.ic_baseline_star_24));
         list.add(new RecipeModel(R.drawable.food4 , "Fries", "Fastfood","Price:","900","4.3",R.drawable.ic_baseline_star_24));
         list.add(new RecipeModel(R.drawable.food6 , "Malai Boti", "Fastfood","Price:","900","4.3",R.drawable.ic_baseline_star_24));
-        list.add(new RecipeModel(R.drawable.food2 , "Beaf Burger", "Fastfood","Price:","900","4.3",R.drawable.ic_baseline_star_24));
+        list.add(new RecipeModel(R.drawable.food2 , "Spicy Beaf Burger 2", "Fastfood","Price:","900","4.3",R.drawable.ic_baseline_star_24));
         list.add(new RecipeModel(R.drawable.food3 , "Ice Cream", "Desert","Price:","900","4.3",R.drawable.ic_baseline_star_24));
 
 
@@ -56,23 +56,23 @@ public class MainActivity extends AppCompatActivity {
         reciperecyclerview.setLayoutManager(layoutManager);
 
 //Category Recyclerview//
-        categoryrecyclerview = findViewById(R.id.catrecyclervivew);
-        ArrayList<CategoryModel> list1 =new ArrayList<>();
-        list1.add(new CategoryModel(R.drawable.food7,"Fast Food"));
-        list1.add(new CategoryModel(R.drawable.food2,"Desert"));
-        list1.add(new CategoryModel(R.drawable.food3,"Salad"));
-        list1.add(new CategoryModel(R.drawable.food4,"Handi"));
-        list1.add(new CategoryModel(R.drawable.food5,"Beverage"));
+        recommendationrecyclerview = findViewById(R.id.recommendation_recyl);
+        ArrayList<RecipeModel> list1 =new ArrayList<>();
+        list1.add(new RecipeModel(R.drawable.food7 , "Zinger Burger","Fastfood", "Price:","250","4.2",R.drawable.ic_baseline_star_24));
+        list1.add(new RecipeModel(R.drawable.food7 , "Zinger Burger","Fastfood", "Price:","250","4.2",R.drawable.ic_baseline_star_24));
+        list1.add(new RecipeModel(R.drawable.food7 , "Zinger Burger","Fastfood", "Price:","250","4.2",R.drawable.ic_baseline_star_24));
+        list1.add(new RecipeModel(R.drawable.food7 , "Zinger Burger","Fastfood", "Price:","250","4.2",R.drawable.ic_baseline_star_24));
 
 
 
-        CategoryAdapter adapter1=new CategoryAdapter(list1,this);
-        categoryrecyclerview.setAdapter(adapter1);
+
+        RecipeAdapter adapter1=new RecipeAdapter(list1,this);
+        recommendationrecyclerview.setAdapter(adapter1);
         LinearLayoutManager layoutManager1= new LinearLayoutManager( this, LinearLayoutManager.HORIZONTAL,false);
-        categoryrecyclerview.setLayoutManager(layoutManager1);
+        recommendationrecyclerview.setLayoutManager(layoutManager1);
 
-        categoryrecyclerview.setHasFixedSize(true);
-        categoryrecyclerview.setNestedScrollingEnabled(false);
+        recommendationrecyclerview.setHasFixedSize(true);
+       recommendationrecyclerview.setNestedScrollingEnabled(false);
 
          //////////Slider//////////
 

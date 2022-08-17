@@ -55,10 +55,10 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/catrecyclervivew"
+                android:id="@+id/recommendation_recyl"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:listitem="@layout/category_recyclerview">
+                tools:listitem="@layout/sample_recyclerview">
 
 
             </androidx.recyclerview.widget.RecyclerView>
